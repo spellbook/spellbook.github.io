@@ -1,11 +1,25 @@
 import React from 'react';
-import Layout from './components/Layout';
+import Generic from './components/Generic';
 import Header from './components/Header';
+import Main from './components/Main';
 
 const App = () => (
-  <Layout>
-    <Header/>
-  </Layout>
+  <div>
+    <Generic root='sb-row' extras='sb-bc-base'>
+      <Generic root='sb-cell' modifiers={ ['s'] }>
+        <Generic root='sb-well' modifiers={ ['l'] }>
+          <Header />
+        </Generic>
+      </Generic>
+    </Generic>
+    <Generic root='sb-row'>
+      <Generic root='sb-cell' modifiers={ ['s'] }>
+        <Generic root='sb-well' modifiers={ ['l'] }>
+          <Main />
+        </Generic>
+      </Generic>
+    </Generic>
+  </div>
 );
 
 export default App;

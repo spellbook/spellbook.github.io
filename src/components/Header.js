@@ -14,7 +14,9 @@ const image = (
 const content = (
   <div>
     <h1 className={ classes.heading }>Spellbook CSS</h1>
-    <p className={ classes.description }>A Sass-based CSS architecture</p>
+    <p className={ classes.description }>
+      A (S)CSS architecture for modular, maintanable systems
+    </p>
   </div>
 );
 

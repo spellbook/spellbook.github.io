@@ -1,4 +1,5 @@
 import React from 'react';
+import Generic from '../components/Generic';
 
 const Bucket = ({ media, content, modifiers }) => {
   let classes = {
@@ -6,23 +7,18 @@ const Bucket = ({ media, content, modifiers }) => {
     media: 'sb-bucket-media',
     content: 'sb-bucket-content'
   };
-  let modifiersList = '';
-
-  if (modifiers) {
-    modifiersList = modifiers.map((modifier) => {
-      return `${ classes.base }--${ modifier }`;
-    }).join(' ');
-  }
 
   return(
-    <div className={ `${ classes.base } ${ modifiersList }`}>
+    <Generic
+      root={ classes.base }
+      modifiers={ modifiers }>
       <div className='sb-bucket-media'>
         { media }
       </div>
       <div className='sb-bucket-content'>
         { content }
       </div>
-    </div>
+    </Generic>
   );
 };
 
