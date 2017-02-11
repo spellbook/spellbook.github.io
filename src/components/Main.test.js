@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Main from './Main';
 
 describe('Main Component', () => {
@@ -14,6 +14,12 @@ describe('Main Component', () => {
     );
 
     expect(actual.contains(expected)).toBe(true);
+  });
+
+  it('should mount in a full DOM', () => {
+    const actual = <Main />;
+
+    expect(mount(actual).find('.sb-longform').length).toBe(1);
   });
 
 });
