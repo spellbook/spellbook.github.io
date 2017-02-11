@@ -7,7 +7,7 @@ const Generic = ({ root, modifiers, extras, children }) => {
   if (modifiers) {
     modifiersList = modifiers.map((modifier) => {
       return ` ${ root }--${ modifier }`;
-    }).join(' ');
+    }).join('');
   }
 
   return(
